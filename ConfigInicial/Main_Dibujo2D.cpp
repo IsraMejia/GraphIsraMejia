@@ -1,5 +1,8 @@
-// Mejia Alba Israel Hipolito 
-
+/*
+Practica 1 Dibujo de primitivas 2D
+Alumno: Mejia Alba Israel Hipolito 
+Fecha de entrega: 19-08-24
+*/
 #include<iostream>
 
 //#define GLEW_STATIC
@@ -25,7 +28,7 @@ int main() {
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
-	GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Israel Mejia - Dibujo de Primitivas en 2D", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Israel Mejia - P1: Dibujo de Primitivas en 2D", NULL, NULL);
 	glfwSetFramebufferSizeCallback(window, resize);
 	
 	//Verificaci�n de errores de creacion  ventana
@@ -87,7 +90,7 @@ int main() {
 		
 		-0.1f, -0.54f, 0.0f,     0.9f,0.3f,0.6f, //   9 - P4.1
 		-0.1f, -0.7f, 0.0f,     0.9f,0.3f,0.0f,  //  10 - P4.2
-		-0.4f, -0.8f, 0.0f,    0.9f,0.3f,0.0f,  //  8 - P4
+		-0.4f, -0.8f, 0.0f,    0.3f,0.1f,0.9f,  //  8 - P4
 
 		-0.4f, -0.8f, 0.0f,    0.0f,0.9f,0.7f,  //  8 - P4
 		-0.1f, -0.7f, 0.0f,     0.9f,0.9f,0.0f,  //  10 - P4.2
