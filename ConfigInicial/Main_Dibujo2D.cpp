@@ -63,10 +63,10 @@ int main() {
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	float vertices[] = {
 		//x    , y   , z		R  ,  G  , B
-		 0.5f,  0.5f, 0.0f,    1.0f,1.0f,1.0f,  // 0 - top right 
-		 0.5f, -0.5f, 0.0f,    1.0f,1.0f,1.0f,  // 1 - bottom right  
-		-0.5f, -0.5f, 0.0f,    1.0f,1.0f,1.0f,  // 2 - bottom left
-		-0.5f,  0.5f, 0.0f,    1.0f,1.0f,1.0f, //  3 - top left 
+		 0.5f,  0.5f, 0.0f,    0.9f, 0.9f, 0.9f,  // 0 - top right 
+		 0.5f, -0.5f, 0.0f,    0.1f,0.1f,0.1f,  // 1 - bottom right  
+		-0.5f, -0.5f, 0.0f,    0.1f,0.1f,0.1f,  // 2 - bottom left
+		-0.5f,  0.5f, 0.0f,    0.1f,0.1f,0.1f, //  3 - top left 
 
 		 0.55f,  0.55f, 0.0f,    1.0f,0.0f,0.0f,  // 4 - P1
 		 0.65f,  0.40f, 0.0f,   1.0f,0.0f,0.0f,  //  5 - P2wi 
@@ -76,9 +76,9 @@ int main() {
 		0.55f,  0.0f, 0.0f,    0.0f,0.3f,0.9f,  //  7 - P3
 		0.1f,  0.40f, 0.0f,    1.0f,0.0f,0.1f,  // 13 - P6
 
-		0.55f,  0.0f, 0.0f,    0.0f,0.3f,0.9f,  //  7 - P3
-		-0.4f, -0.8f, 0.0f,    0.0f,0.3f,0.9f,  //  8 - P4
-		-0.3f,  0.0f, 0.0f,    0.1f,0.9f,0.0f,  // 12 - P5
+		0.55f,  0.0f, 0.0f,    0.7f,0.5f,0.5f,  //  7 - P3
+		-0.4f, -0.8f, 0.0f,    0.0f,0.5f,0.5f,  //  8 - P4
+		-0.3f,  0.0f, 0.0f,    0.1f,0.5f,0.5f,  // 12 - P5
 
 		0.55f,  0.0f, 0.0f,    0.0f,0.9f,0.7f,  //  7 - P3
 		-0.3f,  0.0f, 0.0f,    0.0f,0.9f,0.0f,  // 12 - P5
@@ -92,14 +92,19 @@ int main() {
 		-0.4f, -0.8f, 0.0f,    0.0f,0.9f,0.7f,  //  8 - P4
 		-0.1f, -0.7f, 0.0f,     0.9f,0.9f,0.0f,  //  10 - P4.2
 		-0.4f, -0.95f, 0.0f,    0.1f,0.9f,0.0f,  // 11 - P4.3
+ 
 
 		-0.25f, 0.75f, 0.0f,    1.0f,0.0f,0.1f,  // 14 - P7 
 		0.1f,  0.40f, 0.0f,    0.0f,0.5f,0.0f,  // 13 - P6
 		-0.3f,  0.0f, 0.0f,    0.0f,0.5f,0.0f,  // 12 - P5
 
-		-0.4f, -0.8f, 0.0f,    0.0f,0.3f,0.9f,  //  8 - P4
-		0.55f,  0.0f, 0.0f,    0.0f,0.1f,0.9f,  //  7 - P3
-		-0.3f,  0.0f, 0.0f,    0.0f,0.5f,0.9f,  // 12 - P5
+		-0.7f,  0.85f, 0.0f,     0.0f,0.0f,0.9f,  // 16 - P8.1
+		-0.25f, 0.75f, 0.0f,    1.0f,0.0f,0.1f,  // 14 - P7 
+		-0.7f,  0.75f, 0.0f,     0.0f,0.0f,0.9f,  // 17 - P8.2
+
+		-0.25f, 0.75f, 0.0f,    0.3f,0.9f,0.1f,  // 14 - P7  
+		-0.3f,  0.0f, 0.0f,     0.4f,0.9f,0.7f,  // 12 - P5
+		-0.9f,  0.75f, 0.0f,    0.7f,0.9f,0.1f,  // 15 - P8
 
 		 0.55f,  0.0f, 0.0f,    0.0f,0.3f,0.9f,  //  7 - P3
 		 -0.4f, -0.8f, 0.0f,    0.0f,0.3f,0.9f,  //  8 - P4
@@ -109,7 +114,7 @@ int main() {
 		 -0.3f,  0.0f, 0.0f,    0.1f,0.9f,0.0f,  // 12 - P5
 		 0.1f,  0.40f, 0.0f,    1.0f,0.0f,0.1f,  // 13 - P6
 		-0.25f, 0.75f, 0.0f,    1.0f,0.0f,0.1f,  // 14 - P7
-		-0.8f,  0.6f, 0.0f,     1.0f,0.0f,0.1f,  // 15 - P8
+		-0.9f,  0.75f, 0.0f,    0.3f,0.9f,0.1f,  // 15 - P8
 		-0.7f,  0.7f, 0.0f,     0.0f,0.0f,0.9f,  // 16 - P8.1
 		-0.7f,  0.6f, 0.0f,     0.0f,0.0f,0.9f,  // 17 - P8.2
 	};
@@ -168,7 +173,7 @@ int main() {
 		// GL_POLYGON toma 4 vertices para hacer un poligono
 		//Dibujar primitivas basicas PUNTOS
         glPointSize(10);
-        glDrawArrays(GL_POINTS,0,39);// arreglo, apartir de que elemento, num de elemetos a dibujar  
+        glDrawArrays(GL_POINTS,0,35);// arreglo, apartir de que elemento, num de elemetos a dibujar  
         
 		//Dibujar LINEAS
         //glDrawArrays(GL_LINES,0,2); //Apartir del elemento 0, usar dos vertices para dibujar una linea
@@ -183,7 +188,7 @@ int main() {
 		glDrawArrays(GL_TRIANGLES,4,6);
 		glDrawArrays(GL_TRIANGLES,4,9);
 		glDrawArrays(GL_TRIANGLES,4,12);*/
-		glDrawArrays(GL_TRIANGLES,4,28);
+		glDrawArrays(GL_TRIANGLES,4,27);
         //glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT,0);
 		//glDrawArrays(GL_TRIANGLES,0,3);
 		//glDrawArrays(GL_TRIANGLES,7,9);
